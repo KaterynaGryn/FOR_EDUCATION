@@ -110,6 +110,13 @@ public class University {
 
     }
 
+    public enum SimpleGroups {
+
+        ONE,
+        TWO,
+        THREE;
+    }
+
 
 }
 
