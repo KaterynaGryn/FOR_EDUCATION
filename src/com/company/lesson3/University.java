@@ -71,7 +71,7 @@ public class University {
     public ArrayList<Student> getStudentsBornAfterDate(Long birthDate) {
         ArrayList<Student> lOut = new ArrayList();
         for (Student student : studentArrayList) {
-            if (student.getBirthDate()>=birthDate)
+            if (student.getBirthDate() >= birthDate)
                 lOut.add(student);
 
         }
@@ -79,16 +79,16 @@ public class University {
 
     }
 
-    public enum  SimpleFaculties {
+    public enum SimpleFaculties {
 
         FACULTY_OF_CHEMISTRY,
         FACULTY_OF_COMPUTER_SCIENCE_AND_CYBERNETICS,
         FACULTY_OF_ECONOMICS,
         FACULTY_OF_GEOGRAPHY,
         FACULTY_OF_HISTORY;
-        }
+    }
 
-    public enum  MediumCourses{
+    public enum MediumCourses {
 
         FIRST("Перший курс"),
         SECOND("Другий курс"),
@@ -98,12 +98,17 @@ public class University {
 
 
         private final String nameUkr;
-        MediumCourses(String nameUkr){this.nameUkr = nameUkr;}
+
+        MediumCourses(String nameUkr) {
+            this.nameUkr = nameUkr;
+        }
+
         @Override
-        public String toString (){return nameUkr;}
+        public String toString() {
+            return nameUkr;
+        }
 
     }
-
 
 
 }
