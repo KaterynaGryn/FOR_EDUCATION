@@ -79,6 +79,31 @@ public class University {
 
     }
 
+    public enum  SimpleFaculties {
+
+        FACULTY_OF_CHEMISTRY,
+        FACULTY_OF_COMPUTER_SCIENCE_AND_CYBERNETICS,
+        FACULTY_OF_ECONOMICS,
+        FACULTY_OF_GEOGRAPHY,
+        FACULTY_OF_HISTORY;
+        }
+
+    public enum  MediumCourses{
+
+        FIRST("Перший курс"),
+        SECOND("Другий курс"),
+        THIRD("Третій курс"),
+        FOURTH("Четвертий курс"),
+        FIFTH("Пятий курс");
+
+
+        private final String nameUkr;
+        MediumCourses(String nameUkr){this.nameUkr = nameUkr;}
+        @Override
+        public String toString (){return nameUkr;}
+
+    }
+
 
 
 }
