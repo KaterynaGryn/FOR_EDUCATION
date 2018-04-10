@@ -59,7 +59,7 @@ public class Main {
 //</editor-fold>
 
         //<editor-fold desc="SimpleEnum_month">
-        SimpleEnum month = SimpleEnum.APRIL;
+//        SimpleEnum month = SimpleEnum.APRIL;
 /*
         switch (month) {
 
@@ -90,8 +90,8 @@ public class Main {
         //</editor-fold>
 
         MediumEnum monthMed = MediumEnum.AUGUST;
-        System.out.println(month);
-        System.out.println(month.name());
+        System.out.println(monthMed);
+        System.out.println(monthMed.name());
 
     }
 }
