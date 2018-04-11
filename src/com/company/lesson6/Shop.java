@@ -19,37 +19,37 @@ public class Shop {
 //        person1.setLastName("Adibhatla");
 //        personStaff.add(person1);
 //    }
-    public void removeOneBook() {
-        ArrayList<Book> bookArrayList = new ArrayList<>();
-        if bookName = new.bookName and author = new.author
-        then
-        bookArrayList.remove(1);
-    }
-    public void addNewBook(){
-        ArrayList<Book> bookArrayList = new ArrayList<>();
-        Book book1 = new Book();
-        book1.setAuthor();
-        book1.setBookName();
-        book1.setYearOfpublishing();
-        book1.setNumberOfPages();
-        book1.setPrice();
-        book1.setTypeOfbindingSimpleEnum(typeOfbindingSimpleEnum.SADDLE_STITCHING);
-    }
-
-    public void printBookSpecifiedAuthor(){
-        ArrayList<Book> bookArrayList = new ArrayList<>();
-        if author = new.author
-                then
-        bookArrayList.add(book);
-        System.out.println(bookArrayList);
-    }
-
-    public void printBookSpecifiedInterval(){
-        ArrayList<Book> bookArrayList = new ArrayList<>();
-        if year >1965 and <2015 = new.year
-        then
-        bookArrayList.add(book);
-        System.out.println(bookArrayList);
-    }
+//    public void removeOneBook() {
+//        ArrayList<Book> bookArrayList = new ArrayList<>();
+//        if bookName = new.bookName and author = new.author
+//        then
+//        bookArrayList.remove(1);
+//    }
+//    public void addNewBook(){
+//        ArrayList<Book> bookArrayList = new ArrayList<>();
+//        Book book1 = new Book();
+//        book1.setAuthor();
+//        book1.setBookName();
+//        book1.setYearOfpublishing();
+//        book1.setNumberOfPages();
+//        book1.setPrice();
+//        book1.setTypeOfbindingSimpleEnum(typeOfbindingSimpleEnum.SADDLE_STITCHING);
+//    }
+//
+//    public void printBookSpecifiedAuthor(){
+//        ArrayList<Book> bookArrayList = new ArrayList<>();
+//        if author = new.author
+//                then
+//        bookArrayList.add(book);
+//        System.out.println(bookArrayList);
+//    }
+//
+//    public void printBookSpecifiedInterval(){
+//        ArrayList<Book> bookArrayList = new ArrayList<>();
+//        if year >1965 and <2015 = new.year
+//        then
+//        bookArrayList.add(book);
+//        System.out.println(bookArrayList);
+//    }
 
 }

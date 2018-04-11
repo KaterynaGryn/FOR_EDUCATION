@@ -12,18 +12,19 @@
 
 package com.company;
 
+import com.company.AdditionalTasks.SomeString;
 import com.company.lesson1.CheckMonths;
 import com.company.lesson2.Company;
 import com.company.lesson3.Student;
 import com.company.lesson3.University;
 import com.company.lesson4.MediumEnum;
-import com.company.lesson4.SimpleEnum;
 
 import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) {
+
         CheckMonths checkMonths = new CheckMonths();
         Company company = new Company();
         company.numberOfStaff();
@@ -92,6 +93,11 @@ public class Main {
         MediumEnum monthMed = MediumEnum.AUGUST;
         System.out.println(monthMed);
         System.out.println(monthMed.name());
+
+        SomeString someString = new SomeString();
+        someString.printStringInReverse("I'm unbeliveably available");
+        someString.printStringInReverse("Лев с ума ламу свёл");
+        someString.numberOfTimesSymbolOccurs("I");
 
     }
 }
