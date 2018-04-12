@@ -22,4 +22,17 @@ public class SomeString {
         int numberOfTimes = string1.split(letter,-1).length-1;
         System.out.println("numberOfTimes = " + numberOfTimes);
     }
+
+
+    public void anotherMethodReverse(String someStringFourSymbs) {
+
+       int count = someStringFourSymbs.length();
+       char four = someStringFourSymbs.charAt(count-1);
+       char three = someStringFourSymbs.charAt(count-2);
+       char two = someStringFourSymbs.charAt(count-3);
+       char one = someStringFourSymbs.charAt(count-4);
+        System.out.println("String in reverse order: " + four+three+two+one);
+    }
+
+
 }

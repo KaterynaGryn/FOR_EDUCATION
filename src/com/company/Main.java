@@ -98,7 +98,7 @@ public class Main {
         someString.printStringInReverse("I'm unbeliveably available");
         someString.printStringInReverse("Лев с ума ламу свёл");
         someString.numberOfTimesSymbolOccurs("I");
-
+        someString.anotherMethodReverse("JAVA");
     }
 }
 
