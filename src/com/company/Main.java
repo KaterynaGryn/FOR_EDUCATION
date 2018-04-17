@@ -1,30 +1,20 @@
-/*А домашнее задание очень простое:
-        переделать домашнее задание урок №3, НО в университете должны быть предопределенные:
-        - список факультетов
-        - список курсов
-        - список групп
-        при этом должна быть возможность распечатать эти списки отдельно - т.е. три метода которые будут возвращать списки всех:
-        - факультетов
-        - курсов
-        - групп
-
-        попробуйте использовать несколько типов enum-ов (чтоб внутри были поля)*/
-
 package com.company;
 
-import com.company.AdditionalTasks.SomeString;
+import com.company.lesson7.SomeString;
 import com.company.lesson1.CheckMonths;
 import com.company.lesson2.Company;
 import com.company.lesson3.Student;
 import com.company.lesson3.University;
-import com.company.lesson4.MediumEnum;
+import com.company.lesson4.SimpleEnum;
+import com.company.lesson8.StringsWorks;
+import com.company.myAdditionalWork.Car;
+import com.company.myAdditionalWork.JamesBondCar;
 
 import java.util.ArrayList;
 
 public class Main {
 
-    public static void main(String[] args) {
-
+    public static void lesson1() {
         CheckMonths checkMonths = new CheckMonths();
         Company company = new Company();
         company.numberOfStaff();
@@ -32,8 +22,16 @@ public class Main {
         String inputSurname = "Ivan";
         System.out.println(String.format("Does Name %s exist in the Company? %s", inputName, company.ifNameOfColleagueExists(inputName)));
         System.out.println(String.format("Does such Surname exist in the Company? %s", company.IfSurnameNameOfColleagueExists(inputSurname)));
+    }
 
-        //<editor-fold desc="University">
+    public static void lesson2() {
+
+
+    }
+
+    public static void lesson3() {
+
+//<editor-fold desc="University">
         Student student1 = new Student("Gryn", "Kateryna", "Sergiivna", 549900413L, "02091, Kyiv", "06373073073", 01L, "EP", "1", "1");
         Student student2 = new Student("Mclaren", "Igor", "Petrovych", 549900413L, "02192, Kyiv", "0672018855", 02L, "EP", "2", "1");
         Student student3 = new Student("Zabiyaka", "Maryna", "Petrivna", 549900413L, "01001, Kyiv", "0503513525", 03L, "EM", "3", "1");
@@ -58,10 +56,13 @@ public class Main {
         System.out.println(getStudentsListForGroup);
         System.out.println(univercityName);
 //</editor-fold>
+    }
 
-        //<editor-fold desc="SimpleEnum_month">
-//        SimpleEnum month = SimpleEnum.APRIL;
-/*
+    public static void lesson4() {
+
+
+        SimpleEnum month = SimpleEnum.APRIL;
+
         switch (month) {
 
             case JANUARY:
@@ -87,18 +88,62 @@ public class Main {
             case NOVEMBER:
                 break;
             case DECEMBER:
-                break;*/
-        //</editor-fold>
+                break;
 
-        MediumEnum monthMed = MediumEnum.AUGUST;
-        System.out.println(monthMed);
-        System.out.println(monthMed.name());
 
+            // MediumEnum monthMed = MediumEnum.AUGUST;
+            // System.out.println(monthMed);
+            //  System.out.println(monthMed.name());
+        }
+    }
+
+    public static void lesson5() {
+    }
+
+    public static void lesson6() {
+    }
+
+    public static void lesson7() {
         SomeString someString = new SomeString();
         someString.printStringInReverse("I'm unbeliveably available");
         someString.printStringInReverse("Лев с ума ламу свёл");
         someString.numberOfTimesSymbolOccurs("I");
         someString.anotherMethodReverse("JAVA");
+        someString.anotherMethodReverse1("JAVA1");
+    }
+
+    public static void lesson8() {
+
+
+        StringsWorks stringsWorks = new StringsWorks();
+
+        stringsWorks.everyTextWordReplaceWith(1, "K");
+    }
+
+    public static void myAdditionalWork() {
+        Car mazdaCar = new Car();
+        mazdaCar.start();
+        mazdaCar.drive(60);
+        mazdaCar.stop();
+        JamesBondCar jamesBondCar = new JamesBondCar();
+        jamesBondCar.start();
+        jamesBondCar.drive(60);
+        jamesBondCar.stop();
+    }
+
+    public static void main(String[] args) {
+
+//        lesson1();
+//        lesson2();
+//        lesson3();
+//        lesson4();
+//        lesson5();
+//        lesson6();
+//        lesson7();
+        //      lesson8();
+        myAdditionalWork();
+
+
     }
 }
 
