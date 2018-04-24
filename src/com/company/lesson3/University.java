@@ -12,7 +12,6 @@
 package com.company.lesson3;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class University {
     private String univercityName;
@@ -46,7 +45,7 @@ public class University {
         return "University: " + this.univercityName + ":" + this.studentArrayList;
     }
 
-    public ArrayList<Student> getStudentsListForFaculty(String faculty) {
+    public ArrayList<Student> getStudentsListForFaculty(SimpleFaculties faculty) {
         ArrayList<Student> studentAtFacultyList = new ArrayList();
         for (Student student : studentArrayList) {
             if (student.getFaculty().equals(faculty))
@@ -57,10 +56,10 @@ public class University {
 
     }
 
-    public ArrayList<Student> getStudentsListForGroup(String group) {
+    public ArrayList<Student> getStudentsListForGroup(MediumGroups mediumGroup) {
         ArrayList<Student> studentAtGroupList = new ArrayList();
         for (Student student : studentArrayList) {
-            if (student.getGroup().equals(group))
+            if (student.getGroup().equals(mediumGroup))
                 studentAtGroupList.add(student);
 
         }
@@ -88,18 +87,16 @@ public class University {
         FACULTY_OF_HISTORY;
     }
 
-    public enum MediumCourses {
+    public enum MediumGroups {
 
-        FIRST("Перший курс"),
-        SECOND("Другий курс"),
-        THIRD("Третій курс"),
-        FOURTH("Четвертий курс"),
-        FIFTH("Пятий курс");
-
+        FIRST("Перша група"),
+        SECOND("Друга група"),
+        THIRD("Третя група"),
+        FOURTH("Четверта група"),
+        FIFTH("П'ята група");
 
         private final String nameUkr;
-
-        MediumCourses(String nameUkr) {
+        MediumGroups(String nameUkr) {
             this.nameUkr = nameUkr;
         }
 
@@ -107,14 +104,36 @@ public class University {
         public String toString() {
             return nameUkr;
         }
-
     }
 
-    public enum SimpleGroups {
+    public enum ComplicatedCourses {
 
-        ONE,
-        TWO,
-        THREE;
+        ONE("Первый курс", "Перший курс", 1, EducationalLevel.INCOMPLETEDHIGHEREDUCATION),
+        TWO("Второй курс", "Другий курс", 2, EducationalLevel.BASICHIGHEREDUCATION),
+        THREE("Третий курс", "Третій курс", 3, EducationalLevel.COMPLETEDHIGHEREDUCATION);
+
+        private final String nameRu;
+        private final String nameUa;
+        private final int course;
+        private final EducationalLevel educationalLevel;
+
+        ComplicatedCourses(String nameRu, String nameUa, int course, EducationalLevel educationalLevel) {
+            this.nameRu = nameRu;
+            this.nameUa = nameUa;
+            this.course = course;
+            this.educationalLevel = educationalLevel;
+        }
+
+        @Override
+        public String toString() {
+            return nameRu;
+        }
+
+        private enum EducationalLevel {
+            INCOMPLETEDHIGHEREDUCATION,
+            BASICHIGHEREDUCATION,
+            COMPLETEDHIGHEREDUCATION;
+        }
     }
 
 

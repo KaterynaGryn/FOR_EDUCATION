@@ -36,7 +36,18 @@ public class StringsWorks {
     }
 
 //    //        2. Определить, сколько раз повторяется в тексте каждое слово, которое встречается в нем.
-//    public void countWordsInText(String someText) {
+
+    String veryInterestingText = "For the first time in 35 years, Saudis are allowed to go to the cinema. But what did they watch?";
+    public void howManyTimesWordExistsInText(String veryInterestingText) {
+        String[] stringParced = textString.split(" ");
+        for (int i = 0; i < stringParced.length; i++) {
+            String word = stringParced[i];
+        }
+    }
+//
+//
+//
+// public void countWordsInText(String someText) {
 //        int count = 0;
 //        String words = sentence.split(' ');
 //        for (i = 0; i < words.length; i++) {

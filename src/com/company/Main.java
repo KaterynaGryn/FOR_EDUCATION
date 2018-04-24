@@ -1,16 +1,23 @@
 package com.company;
 
-import com.company.lesson7.SomeString;
 import com.company.lesson1.CheckMonths;
+import com.company.lesson10.Lesson10;
 import com.company.lesson2.Company;
 import com.company.lesson3.Student;
 import com.company.lesson3.University;
 import com.company.lesson4.SimpleEnum;
+import com.company.lesson7.SomeString;
 import com.company.lesson8.StringsWorks;
-import com.company.myAdditionalWork.Car;
-import com.company.myAdditionalWork.JamesBondCar;
+import com.company.lesson9.AdditionalStrings;
+import com.company.lesson9.DifCollections;
+import com.company.myAdditionalWork.MakingDecisionsStatements;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+
+import static com.company.lesson3.University.MediumGroups.FIRST;
+import static com.company.lesson3.University.SimpleFaculties.FACULTY_OF_CHEMISTRY;
 
 public class Main {
 
@@ -47,9 +54,9 @@ public class Main {
 
         University university = new University("SHEVCHENKO");
         university.setStudentArrayList(studentArrayList);
-        ArrayList<Student> getStudentsListForFaculty = university.getStudentsListForFaculty("EM");
+        ArrayList<Student> getStudentsListForFaculty = university.getStudentsListForFaculty(FACULTY_OF_CHEMISTRY);
         ArrayList<Student> getStudentsBornAfterDate = university.getStudentsBornAfterDate(549900413L);
-        ArrayList<Student> getStudentsListForGroup = university.getStudentsListForGroup("1");
+        ArrayList<Student> getStudentsListForGroup = university.getStudentsListForGroup(FIRST);
         String univercityName = university.getUnivercityName();
         System.out.println(getStudentsListForFaculty);
         System.out.println(getStudentsBornAfterDate);
@@ -121,28 +128,55 @@ public class Main {
     }
 
     public static void myAdditionalWork() {
-        Car mazdaCar = new Car();
-        mazdaCar.start();
-        mazdaCar.drive(60);
-        mazdaCar.stop();
-        JamesBondCar jamesBondCar = new JamesBondCar();
-        jamesBondCar.start();
-        jamesBondCar.drive(60);
-        jamesBondCar.stop();
+//        Car mazdaCar = new Car();
+//        mazdaCar.start();
+//        mazdaCar.drive(60);
+//        mazdaCar.stop();
+//        JamesBondCar jamesBondCar = new JamesBondCar();
+//        jamesBondCar.start();
+//        jamesBondCar.drive(60);
+//        System.out.println();
+//        jamesBondCar.stop();
+//        TemperatureConverter temperatureConverter = new TemperatureConverter();
+//        temperatureConverter.convertTemp(20,'F');
+//        temperatureConverter.convertTemp(68,'C');
+//        temperatureConverter.convertTemp(540,'X');
+        MakingDecisionsStatements makingDecisionsStatements = new MakingDecisionsStatements();
+        makingDecisionsStatements.currencyConverterForMyTrip(26.21);
+        makingDecisionsStatements.whatToWearToday(2);
     }
 
+    public static void lesson9() {
+
+        DifCollections difCollections = new DifCollections();
+        AdditionalStrings additionalStrings = new AdditionalStrings();
+        HashSet<String> uniqueSet = additionalStrings.uniqueWordsHighlight("Text is my super puper text text text");
+        additionalStrings.printHashset(uniqueSet);
+    }
+
+    public static void lesson10() {
+
+        Lesson10 lesson10 = new Lesson10();
+        lesson10.readPropFile();
+        System.out.println(lesson10.readPropFile().getProperty("property3"));
+        List<String> list = lesson10.readFileAsList();
+
+
+ //       lesson10.writeToFile("list");
+    }
     public static void main(String[] args) {
 
 //        lesson1();
 //        lesson2();
-//        lesson3();
+//    lesson3();
 //        lesson4();
 //        lesson5();
 //        lesson6();
 //        lesson7();
         //      lesson8();
-        myAdditionalWork();
-
+        //myAdditionalWork();
+  lesson9();
+       // lesson10();
 
     }
 }
