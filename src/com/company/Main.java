@@ -15,6 +15,7 @@ import com.company.myAdditionalWork.MakingDecisionsStatements;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 
 import static com.company.lesson3.University.MediumGroups.FIRST;
 import static com.company.lesson3.University.SimpleFaculties.FACULTY_OF_CHEMISTRY;
@@ -152,6 +153,10 @@ public class Main {
         AdditionalStrings additionalStrings = new AdditionalStrings();
         HashSet<String> uniqueSet = additionalStrings.uniqueWordsHighlight("Text is my super puper text text text");
         additionalStrings.printHashset(uniqueSet);
+       Map<String, Integer> map = additionalStrings.uniqueWordsCountsDifRegister();
+        additionalStrings.printuniqueWordsCountsDifRegister(map);
+        additionalStrings.getListOfStringsSorted();
+        additionalStrings.printListOfStringsSorted(additionalStrings.getListOfStringsSorted());
     }
 
     public static void lesson10() {
@@ -162,8 +167,9 @@ public class Main {
         List<String> list = lesson10.readFileAsList();
 
 
- //       lesson10.writeToFile("list");
+        //       lesson10.writeToFile("list");
     }
+
     public static void main(String[] args) {
 
 //        lesson1();
@@ -175,8 +181,8 @@ public class Main {
 //        lesson7();
         //      lesson8();
         //myAdditionalWork();
-  lesson9();
-       // lesson10();
+        lesson9();
+        // lesson10();
 
     }
 }
