@@ -9,7 +9,9 @@
 
 package com.company.lesson9;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 
 public class AdditionalStrings {
 
@@ -29,6 +31,25 @@ public class AdditionalStrings {
         for (String s : hashSet) {
             System.out.println(s);
         }
+    }
+
+//2. Задана строка с текстом на английском языке. Выделить все различные слова.
+//Для каждого слова подсчитать частоту его встречаемости. Слова, отличающиеся регистром букв, считать различными. Использовать класс HashMap.
+
+    public Map<String, Integer> uniqueWordsCountsDifRegister() {
+        String englishString = "Для каждого слова подсчитать частоту его встречаемости. Слова, отличающиеся регистром букв, считать различными. Использовать класс HashMap";
+        String[] stringParced = englishString.split("\\\\s*(\\\\s|,|!|\\\\.)\\\\s*");
+        Map<String, Integer> hashmap = new HashMap<>();
+
+        for (String s : stringParced) {
+
+            if (hashmap.containsKey(s)) {
+                hashmap.put(s, hashmap.get(s) + 1);
+            } else {
+                hashmap.put(s, 1);
+            }
+        }
+        return hashmap;
     }
 
 
